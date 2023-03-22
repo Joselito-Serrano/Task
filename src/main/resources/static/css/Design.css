@@ -1,0 +1,67 @@
+body {
+  margin: 15px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+}
+
+.grid-content {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  background-color: #ffdab9;
+}
+
+.grid-content form{
+  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  background-color: #ffdab9;
+}
+
+.grid-container .grid-content:nth-child(even) {
+  background-color: #ffdab9;
+}
+
+.grid-container .grid-content:nth-child(odd) {
+  background-color: #f5fffa;
+}
+
+.grid-checkbox {
+  margin: auto;
+}
+
+.grid-checkbox input[type="checkbox"] {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.grid-text {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-text a {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-deletebtn {
+  margin: auto;
+}
+
+.grid-content-new {
+  margin: auto;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/Design.css}">
+</head>
+<body>
+
+<header>To Do List</header>
+
+<div class="grid-container">
+
+    <div class="grid-content" th:each="task: ${Task}">
+        <div class="grid-checkbox">
+            <input type="checkbox" name="completed" id="completed" checked th:if="${task.completed} == true">
+            <input type="checkbox" name="completed" id="completed" th:if="${task.completed} == false">
+        </div>
+        <div class="grid-text">
+            <a th:href="@{/show-task/} + ${task.id}">
+                <p th:text="${task.title}">Lorem Ipmsum</p>
+                <p th:text="${task.description}">Lorem ipsum dolor sit amet, consectetuer adipiscin</p>
+            </a>
+        </div>
+        <div class="grid-deletebtn">
+            <form action="#" method="post" th:action="@{/delete-task/} + ${task.id}">
+                <input type="hidden" name="_method" value="delete"/>
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="grid-content-new">
+        <a th:href="@{/new-task}">
+            <button>Create New Task</button>
+        </a>
+    </div>
+
+</div>
+
+<footer>About</footer>
+
+<script type="text/javascript" th:src="@{/js/Script.js}"></script>
+
+</body>
+</html>

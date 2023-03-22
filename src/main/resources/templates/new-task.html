@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create new Task</title>
+    <link rel="stylesheet" th:href="@{/css/Design.css}">
+</head>
+<body>
+
+<header>To Do List</header>
+
+<div class="grid-content">
+    <div></div>
+    <div class="grid-text">
+        <form action="/home" method="post">
+            <input type="text" name="title" id="title" placeholder="Title here">
+            <input type="text" name="description" id="description" placeholder="Description here">
+            <button type="submit">Save</button>
+        </form>
+    </div>
+    <div></div>
+</div>
+
+<footer>About</footer>
+
+<script type="text/javascript" th:src="@{/js/Script.js}"></script>
+</body>
+</html>
